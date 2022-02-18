@@ -1,6 +1,9 @@
 import random
 import brain_games.cli
 
+if __name__ == '__main__':
+        game()
+
 def game():
     a = random.randint(0, 100)
     print ('Answer "yes" if the number is even, otherwise answer "no".')
