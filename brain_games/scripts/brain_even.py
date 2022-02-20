@@ -8,35 +8,62 @@ def main():
     a = random.randint(0, 100)
     print ('Answer "yes" if the number is even, otherwise answer "no".')
     print ('Question: ' + str(a))
-    b = input ('Your answer: ')
+    b = input('Your answer: ')
     if a % 2 == 0:
         if b == 'yes':
-            print ('Correct!')
+            c = 'Correct!'
+            print (c)
         else:
-            print ("'yes' is wrong answer ;(. Correct answer was 'no'." + "\n" + "Let's try again, " + name)
+            d = "'no' is wrong answer ;(. Correct answer was 'yes'." + "\n" + "Let's try again, " + name
+            print (d)
+            return
     if a % 2 != 0:
         if b == 'no':
-            print ('Correct!')
+            c = 'Correct!'
+            print (c)
         else:
-            print ("'no' is wrong answer ;(. Correct answer was 'yes'." + "\n" + "Let's try again, " + name)
+            d = "'yes' is wrong answer ;(. Correct answer was 'no'." + "\n" + "Let's try again, " + name
+            print (d)
+            return    
+    a = random.randint(0,100)
+    print ('Question: ' + str(a))
+    b = input('Your answer: ')
+    if a % 2 == 0:
+        if b == 'yes':
+            c = 'Correct!'
+            print (c)
+        else:
+            d = "'no' is wrong answer ;(. Correct answer was 'yes'." + "\n" + "Let's try again, " + name
+            print (d)
+            return
+    if a % 2 != 0:
+        if b == 'no':
+            c = 'Correct!'
+            print (c)
+        else:
+            d = "'yes' is wrong answer ;(. Correct answer was 'no'." + "\n" + "Let's try again, " + name
+            print (d)
+            return
+    a = random.randint(0,100)
+    print ('Question: ' + str(a))
+    b = input('Your answer: ')
+    if a % 2 == 0:
+        if b == 'yes':
+            c = 'Correct!'
+            print (c)
+        else:
+            d = "'no' is wrong answer ;(. Correct answer was 'yes'." + "\n" + "Let's try again, " + name
+            print (d)
+            return
+    if a % 2 != 0:
+        if b == 'no':
+            c = 'Correct!'
+            print (c)
+        else:
+            d = "'yes' is wrong answer ;(. Correct answer was 'no'." + "\n" + "Let's try again, " + name
+            print (d)
+            return
+    print ('Congratulations, ' + name + '!')
 
 if __name__ == '__main__':
     main()
-
-  #    if b != 'yes':
-        #   print ("'" + str(b) + "' is wrong answer ;(.")
-    #   elif b != 'no':
-        #   print ("'" + str(b) + "' is wrong answer ;(.")
-    #   print ('Question: ' + str(random.randint(0,100)))
-    #   print ('Your answer: ' + input())
-    #   b = input()
-    #   c
-    #   if b/2 == 0:
-       #    print ('Correct!')
-    #   print ('Question: ' + str(random.randint(0,100)))
-    #   print ('Your answer: ' + input())
-    #   c = input()
-    #   d
-   #    if c/2 == 0:
-       #    print ('Correct!')
-        #   print ('Congratulations, Sam!')
