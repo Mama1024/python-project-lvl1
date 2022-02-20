@@ -1,7 +1,11 @@
+#!/usr/bin/env python
 import random
 from brain_games.cli import *
+from brain_games.scripts.brain_games import brain
 
-def game():
+def main():
+    brain()
+    name = welcome_user() 
     a = random.randint(0, 100)
     print ('Answer "yes" if the number is even, otherwise answer "no".')
     print ('Question: ' + str(a))
@@ -10,12 +14,15 @@ def game():
         if b == 'yes':
             print ('Correct!')
         else:
-            print ("'yes' is wrong answer ;(. Correct answer was 'no'." + "\n" + "Let's try again, " + str(name)
+            print ("'yes' is wrong answer ;(. Correct answer was 'no'." + "\n" + "Let's try again, " + name)
     if a % 2 != 0:
         if b == 'no':
             print ('Correct!')
         else:
-            print ("'no' is wrong answer ;(. Correct answer was 'yes'." + "\n" + "Let's try again, " + str(name)
+            print ("'no' is wrong answer ;(. Correct answer was 'yes'." + "\n" + "Let's try again, " + name)
+
+if __name__ == '__main__':
+    main()
 
   #    if b != 'yes':
         #   print ("'" + str(b) + "' is wrong answer ;(.")
