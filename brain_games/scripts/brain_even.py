@@ -1,10 +1,12 @@
 import random
-import brain_games.cli
+from brain_games.cli import *
+from brain_games.scripts.brain_games import brain
 
 if __name__ == '__main__':
         main()
 def main():
     def game():
+        brain()
         a = random.randint(0, 100)
         print ('Answer "yes" if the number is even, otherwise answer "no".')
         print ('Question: ' + str(a))
@@ -19,7 +21,7 @@ def main():
                 print ('Correct!')
             else:
                 print ("'no' is wrong answer ;(. Correct answer was 'yes'." + "\n" + "Let's try again, " + name)
-main()
+    game()
 
   #    if b != 'yes':
         #   print ("'" + str(b) + "' is wrong answer ;(.")
