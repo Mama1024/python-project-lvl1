@@ -1,27 +1,21 @@
 import random
 from brain_games.cli import *
-from brain_games.scripts.brain_games import brain
 
-if __name__ == '__main__':
-        main()
-def main():
-    def game():
-        brain()
-        a = random.randint(0, 100)
-        print ('Answer "yes" if the number is even, otherwise answer "no".')
-        print ('Question: ' + str(a))
-        b = input ('Your answer: ')
-        if a % 2 == 0:
-            if b == 'yes':
-                print ('Correct!')
-            else:
-                print ("'yes' is wrong answer ;(. Correct answer was 'no'." + "\n" + "Let's try again, " + name)
-        if a % 2 != 0:
-            if b == 'no':
-                print ('Correct!')
-            else:
-                print ("'no' is wrong answer ;(. Correct answer was 'yes'." + "\n" + "Let's try again, " + name)
-    game()
+def game():
+    a = random.randint(0, 100)
+    print ('Answer "yes" if the number is even, otherwise answer "no".')
+    print ('Question: ' + str(a))
+    b = input ('Your answer: ')
+    if a % 2 == 0:
+        if b == 'yes':
+            print ('Correct!')
+        else:
+            print ("'yes' is wrong answer ;(. Correct answer was 'no'." + "\n" + "Let's try again, " + str(name)
+    if a % 2 != 0:
+        if b == 'no':
+            print ('Correct!')
+        else:
+            print ("'no' is wrong answer ;(. Correct answer was 'yes'." + "\n" + "Let's try again, " + str(name)
 
   #    if b != 'yes':
         #   print ("'" + str(b) + "' is wrong answer ;(.")
