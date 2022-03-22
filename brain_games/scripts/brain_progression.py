@@ -1,5 +1,6 @@
 import prompt
 import random
+#import pdb; pdb.set_trace()
 
 if __name__ == '__main__':
     main()
@@ -11,19 +12,36 @@ def main():
     c = ''
     d = ''
     index = ''
-    def game():
+    h = 'no'
+    def test():
         print('What number is missing in the progression?')
-        def test():
-            d = list(range(random.randint(0,100), random.randint(0,100), random.randint(1,100)))
-            if len(d) > 5 and len(d) <= 10:
-                print('Question: ' + ' ' + str(d))
-                return d
-            else:
-                test()
-        d = test()
-        print(d)
-        index = random.choice(d)
-        print(index)
-        answer = prompt.integer('Your answer: ')
-    game()
 
+    def game():
+        d = list(range(random.randint(0, 100), random.randint(0, 100), random.randint(1, 100)))
+        if len(d) > 5 and len(d) <= 10:
+            index = random.randint(0, len(d) - 1)
+            c = d[index]
+            d[index] = '..'
+            print('Question: ' + ' ' + str(d))
+            answer = prompt.integer('Your answer: ')
+            if answer == c:
+                h = 'Correct!'
+                print(h)
+                return h
+            else:
+                print("'" + str(answer) + "'" + " is wrong answer ;(. " + "Correct answer was " + "'" + str(c) + "'")
+                return
+        else:
+            game()
+            return
+    test()
+    game()
+    print(h)
+    if h == 'Correct!':
+        test()
+        game()
+        if h == 'Correct!':
+            test()
+            game()
+            if h == 'Correct!':
+                print('Cogratulations, ' + name + '!')
