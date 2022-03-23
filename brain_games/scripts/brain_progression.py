@@ -29,7 +29,7 @@ def main():
                 print(h)
                 return h
             else:
-                print("'" + str(answer) + "'" + " is wrong answer ;(. " + "Correct answer was " + "'" + str(c) + "'")
+                print("'" + str(answer) + "'" + " is wrong answer ;(. " + "Correct answer was " + "'" + str(c) + "'" + "\n" + "Let's try again, " + name + "!")
                 return nope()
         else:
             return game()
