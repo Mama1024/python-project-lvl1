@@ -1,6 +1,5 @@
 import prompt
 import random
-#import pdb; pdb.set_trace()
 
 if __name__ == '__main__':
     main()
@@ -15,7 +14,8 @@ def main():
     h = 'no'
     def test():
         print('What number is missing in the progression?')
-
+    def nope():
+        g = 'Nope'
     def game():
         d = list(range(random.randint(0, 100), random.randint(0, 100), random.randint(1, 100)))
         if len(d) > 5 and len(d) <= 10:
@@ -30,13 +30,11 @@ def main():
                 return h
             else:
                 print("'" + str(answer) + "'" + " is wrong answer ;(. " + "Correct answer was " + "'" + str(c) + "'")
-                return
+                return nope()
         else:
-            game()
-            return
+            return game()
     test()
-    game()
-    print(h)
+    h = game()
     if h == 'Correct!':
         test()
         game()
