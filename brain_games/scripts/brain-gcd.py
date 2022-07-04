@@ -1,36 +1,37 @@
 #!/usr/bin/env python
 import prompt
 import random
+from brain_games.brain_osnova import name, answer, pervi, vtori_2
 
 if __name__ == '__main__':
         main()
-def main():
 
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print('Hello ' + name + '!')
+def main():
+    name = pervi()
     c = ''
-    def game():
+    print('Find the greatest common divisor of given numbers.')
+    def main_game():
         first = random.randint(0, 100)
         second = random.randint(0, 100)
-        print('Find the greatest common divisor of given numbers.' + '\n' + 'Question: ' + str(first) + ' ' + str(second))
-        answer = prompt.integer('Your answer: ')
-        if first % answer == second % answer:
+        nod = '' 
+        print('Question: ' +  str(first) + ' ' + str(second))
+        answer = vtori_2()
+        while first != 0 and second != 0:
+            if first > second:
+                first = first % second
+            else:
+                second = second % first  
+        if answer == first or answer == second:
             c = ('Correct!')
             print(c)
             return c
         else:
-             while first != 0 and second != 0:
-                if first > second:
-                    first = first % second
-                else:
-                    second = second % first
-        print("'" + str(answer) + "'" + "is wrong answer ;(. Correct answer was " + "'" + str(first + second) + "' ." + "\n" + "Let's try again, " + name + "!")
+            print("'" + str(answer) + "'" + "is wrong answer ;(. Correct answer was " + "'" + str(first + second) + "' ." + "\n" + "Let's try again, " + name + "!")
 
-    c = game()
+    c = main_game()
+    i = 0
     if c == 'Correct!':
-        game()
-        if c == 'Correct!':
-            game()
-            if c == 'Correct!':
-                print('Congratulations, ' + name + '!')
+        while i < 2:
+            main_game()
+            i = i + 1
+        print('Congratulations, ' + name + '!')
